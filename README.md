@@ -1,6 +1,8 @@
 # hubway
 This is a prototype to integrate hubway live feed to the Harvard Campus Map.
 
+View the demo (https://hpoharvard.github.io/hubway/)
+
 The Hubway Data are in json format:
 - Stations Information (https://gbfs.thehubway.com/gbfs/en/station_information.json)
 - Stations Status (https://gbfs.thehubway.com/gbfs/en/station_status.json)
