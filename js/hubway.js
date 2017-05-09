@@ -39,7 +39,20 @@ require([
       }];
 
       var pTemplate = {
-        //title: "{title}",
+        /*content: [{
+          type: "media",
+          mediaInfos: [{
+              //title: "<b>Count by type</b>",
+              type: "pie-chart",
+              caption: "",
+              value: {
+                theme: "Grasshopper",
+                fields: ["capacity","bikesAvailable"],
+                normalizeField: null,
+                //tooltipField: "relationships/0/COMMON"
+              }
+          }]          
+        }]*/
         content: [{
           type: "fields",
           fieldInfos: [{
@@ -72,12 +85,6 @@ require([
             visible: true
           }
           ]
-        }],
-        fieldInfos: [{
-          fieldName: "time",
-          format: {
-            dateFormat: "short-date-short-time"
-          }
         }]
       };
 
@@ -269,7 +276,8 @@ require([
               bikesDisabled: feature.num_bikes_disabled.toString(),
               docksAvailable: feature.num_docks_available.toString(),
               docksDisabled: feature.num_docks_disabled.toString(),
-              lastReported: new Date().toUTCString()//feature.last_reported
+              //lastReported: new Date().toUTCString()//feature.last_reported
+              lastReported: new Date(Number(feature.last_reported + '000')).toLocaleString()
             }
           };
         });        
